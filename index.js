@@ -9,16 +9,38 @@ class D {
     return this.date.getFullYear()
   }
   month(){
-    return this.date.getMonth()
+    const months = ["Jan", "Feb", "Mar", "Apr", "May",
+     "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec" 
+      ]
+    
+    return months[ this.date.getMonth() ]
+  }
+  day(){
+    const days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"]
+
+    return days[this.date.getDay()]
+  }
+  hours() {
+    return this.date.getHours()
+  }
+  mins() {
+    return this.date.getMinutes()
+  }
+  secs(){
+    return this.date.getSeconds()
   }
 }
 
-// Create a date from a string (single parameter)
-const d = new D('9/26/1965') 
-// Create a date from some numbers (list of parameters)
-let e = new D(1970, 1, 1, 0, 0, 0)
+
+const d = new D(2020, 0, 1)
 
 
+console.log(d.year())
+console.log(d.month()) 
+console.log(d.day())   
+// console.log(d.hours()) 
+// console.log(d.mins())  
+// console.log(d.secs())
 
 
 
