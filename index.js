@@ -27,6 +27,10 @@ const months = [
   "Dec",
 ];
 
+function format_num(num) {
+  return (number = num < 10 ? `0${num}` : `${num}`);
+}
+
 class D {
   constructor(...args) {
     this.date = new Date(...args);
@@ -37,11 +41,11 @@ class D {
       m: months[this.month],
       D: this.day,
       d: this.day,
-      H: this.hour,
+      H: format_num(this.hour),
       h: this.hour,
-      I: this.min,
+      I: format_num(this.min),
       i: this.min,
-      S: this.secs,
+      S: format_num(this.secs),
       s: this.secs,
     };
   }
@@ -177,7 +181,7 @@ class D {
   }
 }
 
-const date = new D()
-console.log(date.year)
+const date = new D(2017, 0, 2, 3, 4, 45);
 
+console.log(date.format("H:I:S"));
 module.exports.D = D;
