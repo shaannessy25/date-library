@@ -177,4 +177,7 @@ class D {
   }
 }
 
+const date = new D()
+console.log(date.year)
+
 module.exports.D = D;
