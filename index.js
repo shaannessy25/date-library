@@ -1,4 +1,4 @@
-const months_f = [
+const fullMonths = [
   "January",
   "February",
   "March",
@@ -33,7 +33,7 @@ class D {
     this.chars = {
       Y: this.year,
       y: this.year % 100,
-      M: months_f[this.month],
+      M: fullMonths[this.month],
       m: months[this.month],
       D: this.day,
       d: this.day,
@@ -46,32 +46,68 @@ class D {
     };
   }
 
+  /**
+   * takes date object and returns the full year
+   * @returns number
+   * **/
+
   get year() {
     return this.date.getFullYear();
   }
+
+  /**
+   * takes date object and returns month index (i.e. January == 0)
+   * @return number
+   */
 
   get month() {
     return this.date.getMonth();
   }
 
+  /**
+   * takes date object and returns day index
+   * @return number
+   */
+
   get day() {
     return this.date.getDate();
   }
 
+  /**
+   * takes date object and returns hour index
+   * @return number
+   */
   get hour() {
     return this.date.getHours();
   }
 
+  /**
+   * takes date object and returns exact minute
+   * @return number
+   */
+
   get min() {
     return this.date.getMinutes();
   }
+
+  /**
+   * takes date object and returns exact seconds
+   * @return number
+   */
+
   get secs() {
     return this.date.getSeconds();
   }
 
+  /**
+   * Takes in date object and returns a string
+   * @params string
+   * @return formatted String
+   */
+
   format(f = false) {
     if (f === false) {
-      return `${this.year} ${months_f[this.month]} ${this.day}`;
+      return `${this.year} ${fullMonths[this.month]} ${this.day}`;
     } else {
       let time = "";
       for (let i = 0; i < f.length; i += 1) {
@@ -84,6 +120,12 @@ class D {
       return time;
     }
   }
+
+  /**
+   * Compares current date with date parameter
+   * @return string
+   */
+
   when() {
     const todaysDate = new Date();
     let diff = todaysDate.getTime() - this.date.getTime();
