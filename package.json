@@ -1,7 +1,7 @@
 {
-  "name": "datelib",
+  "name": "@shaanhurley/datelib",
   "version": "1.0.0",
-  "description": "",
+  "description": "date library",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/shaannessy25/date-library.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shaan Hurley",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shaannessy25/date-library/issues"
@@ -20,5 +20,9 @@
   "devDependencies": {
     "jest": "^26.6.3",
     "prettier": "2.2.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
 }
