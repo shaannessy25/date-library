@@ -9,8 +9,6 @@ test("Testing Get Full Year",  () => {
     expect(d.year()).toBe(2020)
     expect(d.month()).toBe("Jan")
     expect(d.day()).toBe("Wed")
-
-     
 })
 
 
