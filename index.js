@@ -181,7 +181,4 @@ class D {
   }
 }
 
-const date = new D(2017, 0, 2, 3, 4, 45);
-
-console.log(date.format("H:I:S"));
 module.exports.D = D;
