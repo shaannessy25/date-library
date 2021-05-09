@@ -28,7 +28,8 @@ const months = [
 ];
 
 function format_num(num) {
-  return (number = num < 10 ? `0${num}` : `${num}`);
+  const number = num < 10 ? `0${num}` : `${num}`;
+  return number;
 }
 
 class D {
@@ -181,4 +182,5 @@ class D {
   }
 }
 
-module.exports.D = D;
+const _D = D;
+export { _D as D };
